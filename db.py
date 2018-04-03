@@ -32,7 +32,7 @@ def create_db():
         ('admin0', 'admin@example.com','XIAOLAJIAO',0),
          ('admin2', 'admin@example.com','DAMI',1)]
   # 插入数据
-  c.executemany('INSERT INTO rentLog (name, phone,rentPhoneType,actiontype) VALUES (?,?,?,?)', purchases)
+  c.executemany('INSERT INTO rentLog (name, phone,rentPhoneType,status) VALUES (?,?,?,?)', purchases)
   # 提交！！！
   conn.commit()
   # 关闭
